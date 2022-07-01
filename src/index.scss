@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Playfair+Display:ital@0;1&display=swap");
+
+:root {
+  --font: "Gentium Book Plus", sans-serif;
+  --headingFont: "Playfair Display", sans-serif;
+
+  --lightBlue: #3ccece;
+  --lightGrey: #f5f4f7;
+  --grey: #c4c4c4;
+  --darkGrey: #777777;
+  --white: #ffffff;
+  --red: #ff6a6a;
+  --yellow: #ffc700;
+  --lime: #c6d800;
+  --orange: #ff8a00;
+  --black: #000000;
+
+  --footer-height: 48px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+  font-family: var(--headingFont);
+  font-size: 30px;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--lightGrey);
+}
+
+p,
+li,
+button,
+a,
+input,
+textarea,
+label,
+form {
+  font-size: 20px;
+}

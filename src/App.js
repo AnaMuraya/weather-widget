@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { LoadingOutlined } from "@ant-design/icons";
 import "./App.scss";
 import Weather from "./components/weather/Weather";
 
@@ -20,24 +21,26 @@ function App() {
         .then((res) => res.json())
         .then((result) => {
           setData(result);
-          console.log(result);
         });
     };
 
     fetchData();
-
-    // console.log("Latitude is: ", lat);
-    // console.log("Longitude is: ", long);
   }, [lat, long]);
 
   return (
     <div className="App" data-testid="app">
-      {/* Weather!!! */}
-      {typeof data.main != "undefined" ? (
-        <Weather weatherData={data} />
-      ) : (
-        <div>Relax***</div> //Add a loading UI
-      )}
+      <div className="heading">
+        <h3>Weather!!!</h3>
+      </div>
+      <div className="widget">
+        {typeof data.main != "undefined" ? (
+          <Weather weatherData={data} />
+        ) : (
+          <div>
+            Relax*** <br /> <LoadingOutlined />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

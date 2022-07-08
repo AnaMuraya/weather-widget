@@ -29,8 +29,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-div {
+h6 {
   font-family: var(--headingFont);
   font-size: 30px;
 }
@@ -47,6 +46,7 @@ a,
 input,
 textarea,
 label,
-form {
+form,
+div {
   font-size: 20px;
 }

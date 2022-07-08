@@ -36,7 +36,7 @@ function App() {
       {typeof data.main != "undefined" ? (
         <Weather weatherData={data} />
       ) : (
-        <div>Relax***</div>
+        <div>Relax***</div> //Add a loading UI
       )}
     </div>
   );
